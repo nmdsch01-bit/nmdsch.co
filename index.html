@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  NOMADISCH — Blog Editorial Internacional
+  ============================================================
+  ARQUIVO: index.html
+  LOCAL NO REPOSITÓRIO: raiz do projeto (/)
+  Exemplo: www.nomadisch.com.br/index.html
+
+  Este é o arquivo principal do blog. Deve ficar na pasta
+  raiz do repositório GitHub Pages.
+
+  GitHub Pages: ative em Settings > Pages > Branch: main / (root)
+  ============================================================
+-->
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTX183YWE3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CTX183YWE3');
+</script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>NOMADISCH — Curated Living, Modern Objects</title>
+  
+  <!-- ============================================================
+    SEO — Meta tags principais
+    Altere os textos abaixo para refletir sua marca e conteúdo
+  ============================================================ -->
+  <meta name="description" content="We provide high-quality curated reviews and lifestyle insights." />
+  <meta name="keywords" content="minimalism, curated products, modern living, design and lifestyle" />
+  <meta name="author" content="NΦMADISCH Editorial" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.nomadisch.com.br" />
+
+  <!-- ============================================================
+    Open Graph — Compartilhamento em redes sociais (Facebook, LINE, etc.)
+    Troque a imagem og-cover.jpg por uma imagem sua no repositório
+  ============================================================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NΦMADISCH — Curated Living & Minimalism" />
+  <meta property="og:description" content="An editorial publication on minimalist living, curated products, and contemporary lifestyle." />
+  <meta property="og:image" content="https://nomadisch.com.br/assets/og-cover.jpg" />
+  <meta property="og:url" content="https://www.nomadisch.com.br/" />
+  <meta property="og:site_name" content="NΦMADISCH" />
+  <meta property="og:locale" content="en_US" />
+
+
+  <!-- ============================================================
+    Schema.org — Dados estruturados para Google Search
+    Tipo: Blog + Organization
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Nomadisch",
+    "url": "https://nomadisch.com.br/",
+    "description": "An editorial publication covering modern design, curated product reviews, and contemporary living.",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "NΦmadisch",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nomadisch.com.br/assets/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- ============================================================
+    Fontes — Carregadas via Google Fonts
+    Cormorant Garamond: display editorial elegante
+    DM Sans: corpo de texto limpo e moderno
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- ============================================================
+    CSS Principal
+    LOCAL NO REPOSITÓRIO: /style.css
+  ============================================================ -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon simples inline SVG — substitua por um arquivo .ico se desejar -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+    SKIP LINK — Acessibilidade: permite pular direto ao conteúdo
+  ============================================================ -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ============================================================
+    HEADER / NAVEGAÇÃO
+    Barra superior fixa com logo, menu e busca
+  ============================================================ -->
+  <header class="site-header" role="banner" id="site-header">
+    <div class="header-inner container">
+
+      <!-- Botão menu mobile (hamburguer) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="nav-toggle">
+        <span class="nav-toggle__line"></span>
+        <span class="nav-toggle__line"></span>
+      </button>
+
+      <!-- Logotipo -->
+      <div class="site-logo">
+        <a href="index.html" aria-label="Nomadisch — Home">
+          <span class="logo-wordmark">NΦMADISCH</span>
+          <span class="logo-sub">est. 2026</span>
+        </a>
+      </div>
+
+      <!-- Navegação principal -->
+      <nav class="site-nav" role="navigation" 
+        aria-label="Primary navigation" id="site-nav">
+        <ul class="nav-list">
+          <li><a href="#featured" class="nav-link"> </a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#articles" class="nav-link">Reviews</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações do header: busca + idioma -->
+      <div class="header-actions">
+        <button class="search-trigger" aria-label="Open search" id="search-trigger">
+          <!-- Ícone de busca SVG inline -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="17" y1="17" x2="22" y2="22"></line>
+          </svg>
+        </button>
+        <span class="lang-tag">EN</span>
+      </div>
+
+    </div><!-- /header-inner -->
+
+    <!-- ============================================================
+      BARRA DE BUSCA
+      Expandível ao clicar no ícone de lupa
+    ============================================================ -->
+    <div class="search-bar" id="search-bar" role="search" aria-hidden="true">
+      <div class="container">
+        <label for="search-input" class="sr-only">Search articles</label>
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="Search articles, topics, products…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button class="search-close" id="search-close" aria-label="Close search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <!-- Resultados da busca aparecem aqui via JavaScript -->
+      <div class="search-results container" id="search-results" aria-live="polite"></div>
+    </div><!-- /search-bar -->
+
+  </header><!-- /site-header -->
+
+
+  <!-- ============================================================
+    MAIN CONTENT
+    Conteúdo principal da página
+  ============================================================ -->
+  <main id="main-content" role="main">
+
+    <!-- ============================================================
+      HERO — Introdução editorial da publicação
+    ============================================================ -->
+    <section class="hero" aria-label="Publication introduction">
+      <div class="container">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">
+            <span class="eyebrow-line"></span>
+            Independent Editorial
+          </p>
+          <h1 class="hero-title">
+            We believe that best things transcend borders<br />
+            <em> </em>
+          </h1>
+          <p class="hero-description">
+            We explores refined objects, contemporary culture,
+        mindful technology, design, and the aesthetics of a slower life.
+          </p>
+          <div class="hero-meta">
+        </div>
+        <!-- Linha decorativa horizontal -->
+        <div class="hero-rule" aria-hidden="true"></div>
+      </div>
+    </section><!-- /hero -->
+
+
+    <!-- ============================================================
+      FEATURED ARTICLE — Artigo em destaque principal
+      Seção âncora: #featured
+    ============================================================ -->
+    <section class="featured-section" id="featured" aria-labelledby="featured-heading">
+      <div class="container">
+
+        <header class="section-header">
+          <h2 class="section-label" id="featured-heading"> </h2>
+        </header>
+
+        <!-- Card principal em destaque -->
+    <article class="featured-card" itemscope itemtype="https://schema.org/Article">
+      <a href="muji-linen-review.html">
+    
+    <div class="featured-card__image">
+
+      <img 
+        src="image/muji-summer.jpg" 
+        alt="MUJI Linen Summer Collection"
+        class="featured-image"
+      />
+    </div>
+  </a>
+  <div class="featured-card__content">
+    
+          </a>
+          <div class="featured-card__content">
+            <div class="article-meta">
+              <span class="article-category" itemprop="about">Contemporary Living</span>
+              <time class="article-date" datetime=" " itemprop="datePublished">July 2026</time>
+            </div>
+            <h3 class="featured-card__title" itemprop="headline">
+              <a href="muji-linen-review.html">
+                The MUJI Linen Summer Collection:<br />
+                When Fabric Becomes Philosophy
+              </a>
+            </h3>
+            <p class="featured-card__excerpt" itemprop="description">
+              There is a kind of discipline in choosing nothing — no pattern, no embellishment,
+              no statement. The 2026 MUJI linen line is not about what it is, but about what it
+              refuses to become. A study in restraint.
+            </p>
+            <div class="featured-card__footer">
+              <span class="read-time">8 min read</span>
+              <a href="muji-linen-review.html">
+                <a href="https://www.nomadisch.com.br/muji-linen-review.html"> Read Essay
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article><!-- /featured-card -->
+
+      </div>
+    </section><!-- /featured-section -->
+
+
+    <!-- ============================================================
+      CATEGORIES — Sistema de categorias do blog
+      Seção âncora: #categories
+    ============================================================ -->
+    <section class="categories-section" id="categories" aria-labelledby="categories-heading">
+      <div class="container">
+
+        <header class="section-header section-header--flex">
+          <h2 class="section-label" id="categories-heading">Categories</h2>
+          <p class="section-note">Browse by subject</p>
+        </header>
+
+        <!-- Grade de categorias — filtros clicáveis -->
+        <nav class="categories-grid" aria-label="Article categories">
+          <button class="category-chip category-chip--active" data-category="all" aria-pressed="true">
+            All
+          </button>
+          <button class="category-chip" data-category="living" aria-pressed="false">
+            Living
+          </button>
+          <button class="category-chip" data-category="technology" aria-pressed="false">
+            Technology
+          </button>
+          <button class="category-chip" data-category="travel" aria-pressed="false">
+            Travel
+          </button>
+          <button class="category-chip" data-category="objects" aria-pressed="false">
+            Objects
+          </button>
+          <button class="category-chip" data-category="food" aria-pressed="false">
+            Food & Ritual
+          </button>
+        </nav>
+
+      </div>
+    </section><!-- /categories-section -->
+
+
+    <!-- ============================================================
+      ARTICLES GRID — Grade de artigos / reviews
+      Seção âncora: #articles
+    ============================================================ -->
+    <section class="articles-section" id="articles" aria-labelledby="articles-heading">
+      <div class="container">
+
+        <header class="section-header section-header--flex">
+          <h2 class="section-label" id="articles-heading">Latest</h2>
+          <span class="articles-count" id="articles-count" aria-live="polite">6 articles</span>
+        </header>
+
+        <!-- Grade principal de artigos — preenchida via JS + dados no script.js -->
+        <div class="articles-grid" id="articles-grid" role="list">
+
+         <!-- ── Artigo 1 ── -->
+<article class="article-card" data-category="skin-care" role="listitem"
+         itemscope itemtype="https://schema.org/Article">
+
+  <a href="pdrn-stick-multi-balm-review.html"
+     class="article-card__image-link"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="article-card__image">
+
+      <!-- TROQUE PELA FOTO REAL DEPOIS -->
+      <img
+        src="image/pdrm-6.jpg"
+        alt="PDRN Pink Collagen Stick Multi Balm"
+        class="featured-image"
+      >
+
+    </div>
+
+  </a>
+
+  <div class="article-card__body">
+
+    <div class="article-meta">
+      <span class="article-category" itemprop="about">Skin Care</span>
+      <time class="article-date"
+            datetime="2026-06-01"
+            itemprop="datePublished">
+        Jun 01
+      </time>
+    </div>
+
+    <h3 class="article-card__title" itemprop="headline">
+      <a href="pdrn-stick-multi-balm-review.html">
+        PDRN Pink Collagen Stick Multi Balm Review
+      </a>
+    </h3>
+
+    <p class="article-card__excerpt" itemprop="description">
+      A portable skincare balm designed for hydration,
+      glow and everyday convenience.
+    </p>
+
+    <div class="article-card__footer">
+      <span class="read-time">6 min</span>
+      <span class="article-card__tag">Review</span>
+    </div>
+
+         </div>
+
+         </article>
+          <!-- /article 1 -->
+
+          
+          <!-- ── Artigo 2 ── -->
+          <article class="article-card" data-category="objects" role="listitem"
+                   itemscope itemtype="https://schema.org/Article">
+            
+            <a href="the-tsubame-notebook-review.html" 
+              class="article-card__image-link" 
+              tabindex="-1" 
+              aria-hidden="true">
+              
+              <div class="article-card__image">
+
+          <!-- TROQUE PELA FOTO REAL DEPOIS -->
+          <img
+            src="image/Tsubame_Note-banner-1.png"
+        alt="The Tsubame Notebook"
+        class="featured-image"
+      >
+  
+        </div>
+              
+            </a>
+            
+            <div class="article-card__body">
+              <div class="article-meta">
+                <span class="article-category" itemprop="about">Objects</span>
+                <time class="article-date" 
+                  datetime="2026-07-05" 
+                  itemprop="datePublished">Jul 05</time>
+              </div>
+              
+              <h3 class="article-card__title" itemprop="headline">
+                <a href="the-tsubame-notebook-review.html">
+                  The Tsubame Notebook: Four Decades of Quiet Manufacturing
+                </a>
+              </h3>
+              
+              <p class="article-card__excerpt" itemprop="description">
+                Made in Tsubame-Sanjo for over forty years. A stainless spiral notebook
+                that outlasts the thoughts it holds.
+              </p>
+              
+              <div class="article-card__footer">
+                <span class="read-time">5 min</span>
+                <span class="article-card__tag">Review</span>
+              </div>
+              
+            </div>
+          </article><!-- /article 2 -->
+
+          <!-- ── Artigo 3 ── -->
+          <article class="article-card" data-category="travel" role="listitem"
+                   itemscope itemtype="https://schema.org/Article">
+         
+            <a href="naoshima-in-august-review.html" 
+              class="article-card__image-link" 
+              tabindex="-1" 
+              aria-hidden="true">
+            
+              <div class="article-card__image">
+ 
+      <!-- TROQUE PELA FOTO REAL DEPOIS -->
+          <img
+            src="image/images01.jpg"
+        alt="Naoshima"
+        class="featured-image"
+      >
+              </div>
+            </a>
+            <div class="article-card__body">
+              <div class="article-meta">
+                <span class="article-category" itemprop="about">Travel</span>
+                <time class="article-date" 
+                  datetime="2024-06-28" 
+                  itemprop="datePublished">Jun 28</time>
+              </div>
+              
+              <h3 class="article-card__title" itemprop="headline">
+                <a href="naoshima-in-august-review.html">
+                  Naoshima in August: The Island That Asks Nothing of You
+                </a>
+              </h3>
+              
+              <p class="article-card__excerpt" itemprop="description">
+                No itinerary. No tourist logic. Just the Setouchi heat, 
+                Tadao Ando concrete,
+             and the discipline of slowness.
+              </p>
+              
+              <div class="article-card__footer">
+                <span class="read-time">9 min</span>
+                <span class="article-card__tag">Travel</span>
+              </div>
+            </div>
+          </article><!-- /article 3 -->
+
+          <!-- ── Artigo 4 ── -->
+          <article class="article-card" data-category="living" 
+         role="listitem"
+                   itemscope itemtype="https://schema.org/Article">
+          
+            <a href="kado.html" 
+              class="article-card__image-link" 
+              tabindex="-1" 
+              aria-hidden="true">
+              
+              <div class="article-card__image">
+
+<!-- TROQUE PELA FOTO REAL DEPOIS -->
+          <img
+            src="image/KADO 01.jpg"
+        alt="KADO"
+        class="featured-image"
+      >            
+           </div>
+            </a>
+            <div class="article-card__body">
+              <div class="article-meta">
+                <span class="article-category" itemprop="about">Japanese Living</span>
+                <time class="article-date" 
+                  datetime=" "
+                  itemprop="datePublished">Jun 20</time>
+              </div>
+              
+              <h3 class="article-card__title" itemprop="headline">
+                <a href="kado.html">
+                  Kado: The Architecture of the Japanese Summer Entrance
+                </a>
+              </h3>
+              
+              <p class="article-card__excerpt" itemprop="description">
+                The genkan as philosophy — how the threshold between outside and inside
+                defines everything that happens beyond it.
+              </p>
+              
+              <div class="article-card__footer">
+                <span class="read-time">7 min</span>
+                <span class="article-card__tag">Culture</span>
+              </div>
+            </div>
+          </article><!-- /article 4 -->
+
+          <!-- ── Artigo 5 ── -->
+          <article class="article-card" data-category="Objects" role="listitem"
+                   itemscope itemtype="https://schema.org/Article">
+            
+            <a href="parasol-with-protection.html" 
+              class="article-card__image-link" 
+              tabindex="-1" aria-hidden="true">
+              
+              <div class="article-card__image">
+                <!-- TROQUE PELA FOTO REAL DEPOIS -->
+               <img src="image/715XPj3UUpL._AC_SX679_.jpg"
+                 alt="parasol-with-protection.html"
+                 class="featured-image" > 
+      
+         </a> </div>
+        
+            <div class="article-card__body">
+              <div class="article-meta">
+                <span class="article-category" itemprop="about">Objects</span>
+                <time class="article-date" 
+                  datetime=" " itemprop="datePublished">Jun 12</time>
+              </div>
+              
+              <h3 class="article-card__title" itemprop="headline">
+                <a href="parasol-with-protection.html">
+                  A Stylish All-Weather Parasol with 
+                  UPF50+ UV Protection: An Honest Review!
+                </a>
+              </h3>
+              
+              <p class="article-card__excerpt" itemprop="description">
+                The Art of Sun Protection: Why the UPF50+ UV Parasol is the 
+                New Essential Item in Japan? When life moves fast, true luxury 
+                stay in things that allow you to slow down, breathe, and enjoy the journey.
+              </p>
+              <div class="article-card__footer">
+                <span class="read-time">10 min</span>
+                <span class="article-card__tag">Review</span>
+              </div>
+            </div>
+          </article><!-- /article 5 -->
+
+          <!-- ── Artigo 6 ── -->
+          <article class="article-card" data-category="food" role="listitem"
+                   itemscope itemtype="https://schema.org/Article">
+            <a href="article.html" class="article-card__image-link" tabindex="-1" aria-hidden="true">
+              <div class="article-card__image">
+                <div class="img-placeholder img-placeholder--food" aria-hidden="true"></div>
+              </div>
+            </a>
+            <div class="article-card__body">
+              <div class="article-meta">
+                <span class="article-category" itemprop="about">Food & Ritual</span>
+                <time class="article-date" datetime="2024-06-05" itemprop="datePublished">Jun 05</time>
+              </div>
+              <h3 class="article-card__title" itemprop="headline">
+                <a href="article.html">
+                  Cold Brew, Kyusu, Morning Light: The Japanese Iced Tea Ritual
+                </a>
+              </h3>
+              <p class="article-card__excerpt" itemprop="description">
+                From the koridashi method to loose-leaf Gyokuro — a taxonomy of
+                cold infusion as summer meditation practice.
+              </p>
+              <div class="article-card__footer">
+                <span class="read-time">5 min</span>
+                <span class="article-card__tag">Ritual</span>
+              </div>
+            </div>
+          </article><!-- /article 6 -->
+
+        </div><!-- /articles-grid -->
+
+        <!-- Botão carregar mais artigos -->
+        <div class="load-more-wrapper">
+          <button class="btn-load-more" id="load-more" aria-label="Load more articles">
+            Load more
+          </button>
+        </div>
+
+      </div>
+    </section><!-- /articles-section -->
+
+
+    <!-- ============================================================
+      EDITORIAL INTERLUDE — Citação tipográfica entre seções
+    ============================================================ -->
+    <aside class="editorial-quote" aria-label="Editorial statement">
+      <div class="container">
+        <blockquote>
+          <p>
+            "We are interested in things made slowly,<br />
+            with patience — and in the people who use them the same way."
+          </p>
+          <footer>
+            <cite>— NΦmadisch, Editors' Letter, Issue 01</cite>
+          </footer>
+        </blockquote>
+      </div>
+    </aside><!-- /editorial-quote -->
+
+
+    <!-- ============================================================
+      ABOUT STRIP — Apresentação da publicação
+      Seção âncora: #about
+    ============================================================ -->
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-label">
+            <h2 class="section-label" id="about-heading">About</h2>
+          </div>
+          <div class="about-content">
+            <p class="about-text">
+              NΦmadisch is an independent editorial publication. We write reviews about objects,
+              places, and practices that reward attention. Our focus: Minimalist design
+              culture, considered technology, and the aesthetics of daily life.
+            </p>
+            <p class="about-text">
+              No advertising algorithms. No affiliate pressures. Only the things we
+              genuinely believe are worth your time.
+            </p>
+            <div class="about-facts">
+              <div class="fact">
+                <span class="fact-number">01</span>
+                <span class="fact-label">Independent</span>
+              </div>
+              <div class="fact">
+                <span class="fact-number">EN</span>
+                <span class="fact-label">English-first</span>
+              </div>
+              <div class="fact">
+                <span class="fact-number">∞</span>
+                <span class="fact-label">Ongoing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /about-section -->
+
+
+    <!-- ============================================================
+      NEWSLETTER — Seção de captura de e-mail
+    ============================================================ -->
+    <section class="newsletter-section" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-inner">
+          <div class="newsletter-copy">
+            <h2 class="newsletter-title" id="newsletter-heading">
+              The NΦmadisch Letter
+            </h2>
+            <p class="newsletter-description">
+              Occasional. Considered. Never noise.
+              One essay, one object, one place — sent infrequently.
+            </p>
+          </div>
+          <form class="newsletter-form" id="newsletter-form" novalidate aria-label="Newsletter signup">
+            <div class="form-group">
+              <label for="newsletter-email" class="sr-only">Your email address</label>
+              <input
+                type="email"
+                id="newsletter-email"
+                name="email"
+                class="newsletter-input"
+                placeholder="your@email.com"
+                required
+                autocomplete="email"
+              />
+              <button type="submit" class="newsletter-submit">
+                Subscribe
+              </button>
+            </div>
+            <p class="form-note">No spam. Unsubscribe anytime. We respect your attention.</p>
+            <!-- Mensagem de sucesso/erro exibida via JS -->
+            <p class="form-message" id="form-message" role="alert" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section><!-- /newsletter-section -->
+
+  </main><!-- /main-content -->
+
+
+  <!-- ============================================================
+    FOOTER — Rodapé editorial
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-top">
+        <!-- Identidade da publicação -->
+        <div class="footer-brand">
+          <span class="footer-logo">NΦmadisch</span>
+          <p class="footer-tagline">
+            An independent editorial publication<br />
+            on minimalist living & modern objects.
+          </p>
+        </div>
+
+        <!-- Navegação do rodapé -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav__col">
+            <h3 class="footer-nav__heading"> </h3>
+            <ul>
+              <li><a href="#featured">Latest</a></li>
+              <li><a href="#articles">Reviews</a></li>
+              <li><a href="#categories">Categories</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav__col">
+            <h3 class="footer-nav__heading">Explore</h3>
+            <ul>
+              <li><a href="#">Living</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Travel</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav__col">
+            <h3 class="footer-nav__heading">Publication</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="editorial-policy.html">Editorial Policy</a></li>
+              <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div><!-- /footer-top -->
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          ©2026 NΦmadisch, LLC - All rights reserved.
+        </p>
+        <p class="footer-rights">
+          Independent editorial
+        </p>
+      </div><!-- /footer-bottom -->
+
+    </div>
+  </footer><!-- /site-footer -->
+
+
+  <!-- ============================================================
+    PROGRESS BAR — Barra de progresso de leitura (topo da página)
+  ============================================================ -->
+  <div class="reading-progress" id="reading-progress" aria-hidden="true" role="presentation"></div>
+
+
+  <!-- ============================================================
+    JAVASCRIPT PRINCIPAL
+    LOCAL NO REPOSITÓRIO: /script.js
+  ============================================================ -->
+  <script src="script.js"></script>
+
+</body>
+</html>
