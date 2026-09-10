@@ -29,46 +29,34 @@
     <loc>https://www.nomadisch.co/muji-linen-review.html</loc>
     <priority>0.9</priority>
   </url>
-</urlset>
   
   <!-- Post 02 - do Creme PDRN -->
   <url>
     <loc>https://www.nomadisch.co/pdrn-stick-multi-balm-review.html</loc>
     <priority>0.9</priority>
   </url>
-</urlset>
 
  <!-- Posts 03 TSUBAME -->
   <url>
     <loc>https://www.nomadisch.co/the-tsubame-notebook-review.html</loc>
     <priority>0.9</priority>
   </url>
-</urlset>
 
  <!-- Posts 04 NAOSHIMA -->
   <url>
     <loc>https://www.nomadisch.co/naoshima-in-august-review.html</loc>
     <priority>0.9</priority>
   </url>
-</urlset>
 
  <!-- Posts 05 KADO -->
   <url>
     <loc>https://www.nomadisch.co/kado.html</loc>
     <priority>0.9</priority>
   </url>
-</urlset>
 
  <!-- Posts 06 PARASOL -->
   <url>
     <loc>https://www.nomadisch.co/parasol-with-protection.html</loc>
-    <priority>0.9</priority>
-  </url>
-</urlset>
-
- <!-- Posts 07 PARASOL -->
-  <url>
-    <loc> </loc>
     <priority>0.9</priority>
   </url>
 </urlset>
