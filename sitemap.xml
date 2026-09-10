@@ -5,6 +5,18 @@
     <loc>https://nomadisch.co</loc>
     <priority>1.0</priority>
   </url>
+
+ <!-- Página de ABOUT US -->
+  <url>
+    <loc>https://www.nomadisch.co/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+<!-- EDITORIAL POLICY -->
+  <url>
+    <loc>https://www.nomadisch.co/editorial-policy.html</loc>
+    <priority>0.8</priority>
+  </url>
   
   <!-- Página de Disclosure -->
   <url>
