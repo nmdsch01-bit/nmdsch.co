@@ -158,15 +158,19 @@ img {
 }
 
 /* Limita o tamanho da imagem de destaque do post */
-.post-hero img, 
-.hero-image, 
-article img:first-of-type {
-  max-width: 800px !important;  /* Impede que ela fique gigante no computador */
-  max-height: 450px !important; /* Deixa a imagem com uma proporção horizontal mais elegante */
+.hero-image-wrapper img,
+.hero-image img,
+img.featured-image,
+article img:first-of-type,
+[class*="hero"] img {
   width: 100% !important;
-  object-fit: cover !important; /* Corta as bordas da foto sem distorcer o frasco da COSRX */
-  margin: var(--space-8) auto !important; /* Centraliza a imagem e dá espaço para o texto */
+  max-width: 720px !important;   /* Deixa a largura super equilibrada */
+  height: 380px !important;       /* Fixa uma altura elegante para não empurrar o texto para baixo */
+  object-fit: cover !important;   /* Corta as laterais sem distorcer o frasco da COSRX */
+  margin: var(--space-6) auto !important; /* Centraliza a imagem perfeitamente */
+  border-radius: var(--radius-sm);
 }
+
 
 
 /* Listas sem estilo padrão */
