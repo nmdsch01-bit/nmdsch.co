@@ -157,20 +157,34 @@ img {
   display: block;
 }
 
-/* Limita o tamanho da imagem de destaque do post */
-.hero-image-wrapper img,
-.hero-image img,
-img.featured-image,
-article img:first-of-type,
-[class*="hero"] img {
+/* Garante que as imagens dos cards na Home fiquem perfeitas e intocadas */
+.articles-grid img, 
+.featured-card img,
+.card img {
   width: 100% !important;
-  max-width: 720px !important;   /* Deixa a largura super equilibrada */
-  height: 380px !important;       /* Fixa uma altura elegante para não empurrar o texto para baixo */
-  object-fit: cover !important;   /* Corta as laterais sem distorcer o frasco da COSRX */
-  margin: var(--space-6) auto !important; /* Centraliza a imagem perfeitamente */
-  border-radius: var(--radius-sm);
+  height: auto !important;
+  max-height: none !important;
+  object-fit: cover !important;
 }
 
+/* Ajusta a imagem de destaque APENAS dentro da página do post */
+.single-post-content img:first-of-type,
+main article img:first-of-type,
+.post-body img:first-of-type {
+  width: 100% !important;
+  max-width: 720px !important;    /* Controla a largura máxima no computador */
+  margin: var(--space-8) auto !important; /* Centraliza na página */
+}
+
+/* Regra exclusiva para computadores (telas maiores que 768px) */
+@media (min-width: 769px) {
+  .single-post-content img:first-of-type,
+  main article img:first-of-type,
+  .post-body img:first-of-type {
+    height: 420px !important;     /* Fixa uma altura horizontal elegante no PC */
+    object-fit: cover !important; /* Faz o corte perfeito sem distorcer */
+  }
+}
 
 
 /* Listas sem estilo padrão */
