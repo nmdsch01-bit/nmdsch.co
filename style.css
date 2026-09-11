@@ -220,9 +220,13 @@ h1, h2, h3, h4 {
 
 /* Reduz o tamanho do título principal do artigo */
 h1 {
-  font-size: 2.5rem; /* Ajuste para menos (ex: 2.2rem) se ainda achar grande */
-  margin-top: var(--space-4); /* Garante um espaço respiro acima dele */
-  margin-bottom: var(--space-3); /* Controla o espaço até o texto de baixo */
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.8rem) !important; /* Adaptável no mobile (5vw), elegante no PC (2.8rem) */
+  font-weight: 300;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  margin-top: var(--space-8) !important;   /* Dá um respiro excelente em relação ao cabeçalho */
+  margin-bottom: var(--space-4) !important; /* Espaço perfeito até o texto de introdução */
 }
 
 /* Parágrafo padrão */
