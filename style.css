@@ -202,6 +202,13 @@ h1, h2, h3, h4 {
   letter-spacing: -0.01em;
 }
 
+/* Reduz o tamanho do título principal do artigo */
+h1 {
+  font-size: 2.5rem; /* Ajuste para menos (ex: 2.2rem) se ainda achar grande */
+  margin-top: var(--space-4); /* Garante um espaço respiro acima dele */
+  margin-bottom: var(--space-3); /* Controla o espaço até o texto de baixo */
+}
+
 /* Parágrafo padrão */
 p {
   max-width: 62ch;
