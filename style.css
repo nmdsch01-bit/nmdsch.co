@@ -4,7 +4,7 @@
   ============================================================
   ARQUIVO: style.css
   LOCAL NO REPOSITÓRIO: raiz do projeto (/)
-  Exemplo: nomadisch.github.com.br/style.css
+  Exemplo: nomadisch.github.co/style.css
 
   Estrutura deste arquivo:
   01. Custom Properties (variáveis CSS)
@@ -156,6 +156,18 @@ img {
   height: auto;
   display: block;
 }
+
+/* Limita o tamanho da imagem de destaque do post */
+.post-hero img, 
+.hero-image, 
+article img:first-of-type {
+  max-width: 800px !important;  /* Impede que ela fique gigante no computador */
+  max-height: 450px !important; /* Deixa a imagem com uma proporção horizontal mais elegante */
+  width: 100% !important;
+  object-fit: cover !important; /* Corta as bordas da foto sem distorcer o frasco da COSRX */
+  margin: var(--space-8) auto !important; /* Centraliza a imagem e dá espaço para o texto */
+}
+
 
 /* Listas sem estilo padrão */
 ul, ol {
