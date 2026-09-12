@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://sitemaps.org"
-        xmlns:image="http://google.com">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://google.com">
   <url>
-    <loc>https://www.nomadisch.co/</loc>
-     <lastmod>2026-09-12</lastmod>
+    <loc>https://nomadisch.co</loc>
+    <lastmod>2026-09-12</lastmod>
     <priority>1.0</priority>
   </url>
+</urlset>
+
+
 
  <!-- Página de ABOUT US -->
   <url>
