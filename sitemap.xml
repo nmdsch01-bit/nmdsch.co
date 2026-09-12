@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://sitemaps.org"
         xmlns:image="http://google.com">
-
-  <!-- Sua Página Inicial -->
   <url>
     <loc>https://www.nomadisch.co/</loc>
+     <lastmod>2026-09-12</lastmod>
     <priority>1.0</priority>
   </url>
 
