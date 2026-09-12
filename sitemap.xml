@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://sitemaps.org/schemas/sitemap/0.9">
   <!-- 1. Sua Página Inicial -->
   <url>
     <loc>https://nomadisch.co</loc>
@@ -20,7 +20,7 @@
   
   <!-- Página de Disclosure -->
   <url>
-    <loc>https://nomadisch.coaffiliate-disclosure.html</loc>
+    <loc>https://nomadisch.co/affiliate-disclosure.html</loc>
     <priority>0.8</priority>
   </url>
 
