@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org/schemas/sitemap/0.9">
-  <!-- 1. Sua Página Inicial -->
+  
+  <!-- Sua Página Inicial -->
   <url>
     <loc>https://www.nomadisch.co/</loc>
     <priority>1.0</priority>
@@ -59,11 +60,13 @@
     <loc>https://www.nomadisch.co/parasol-with-protection.html</loc>
     <priority>0.9</priority>
   </url>
+
+ <!-- Posts 07 COSRX -->
+<url>
+    <loc>https://nomadisch.co/cosrx-snail-mucin-review.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
-
-
-
-
 
 
 
