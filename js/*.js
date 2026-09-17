@@ -1,0 +1,107 @@
+/* ==========================================================
+   NΦMADISCH — Journal content
+   ==========================================================
+   HOW TO ADD A NEW TEXT:
+   1. Copy one of the objects below (between { and }).
+   2. Paste it at the TOP of the journalEntries array — the list
+      is sorted newest-first automatically, so order in this file
+      doesn't matter, but keeping newest on top is easier to read.
+   3. Fill in the fields. See notes under each field.
+   4. Save. journal.html and journal.css never need to change.
+
+   FIELDS:
+   - id        unique slug, used in the URL and as a React-free key.
+               lowercase, hyphens only, no spaces.
+   - title     the headline as it appears in the list.
+   - dek       one-sentence summary (shown under the title).
+   - category  must match one of the keys in CATEGORY_LABELS below.
+   - date      "YYYY-MM-DD" — used for sorting, shown as e.g. "Jul 2026".
+   - readTime  integer, minutes.
+   - url       where the full essay lives (e.g. "the-art-of-nothing.html").
+               Until the essay page exists, you can point this at "#".
+   - image     path to a thumbnail image (square works best, e.g.
+               "images/journal/the-art-of-nothing.jpg"). If you don't
+               have a photo yet, leave image as null and a soft
+               placeholder in the category color will show instead.
+   ========================================================== */
+
+const CATEGORY_LABELS = {
+  "wabi-sabi": "Wabi-Sabi",
+  "hygge":     "Hygge",
+  "ritual":    "Ritual",
+  "culture":   "Culture",
+  "letter":    "Editor's Letter"
+};
+
+const journalEntries = [
+  {
+    id: "art-of-nothing-on-the-table",
+    title: "The Art of Nothing on the Table",
+    dek: "On ma — the Japanese principle of intentional emptiness — and what a bare surface is actually for.",
+    category: "wabi-sabi",
+    date: "2026-09-10",
+    readTime: 7,
+    url: "#",
+    image: null
+  },
+  {
+    id: "growing-old-without-pretending-otherwise",
+    title: "Growing Old Without Pretending Otherwise",
+    dek: "A note on objects that don't fake newness — tarnished metal, yellowed paper, and the case against constant upgrading.",
+    category: "wabi-sabi",
+    date: "2026-09-03",
+    readTime: 6,
+    url: "#",
+    image: null
+  },
+  {
+    id: "winter-is-a-practice-not-a-season",
+    title: "Winter Is a Practice, Not a Season",
+    dek: "Hygge as an active decision to slow down — not a blanket and a candle, but a discipline against the pull of urgency.",
+    category: "hygge",
+    date: "2026-08-27",
+    readTime: 5,
+    url: "#",
+    image: null
+  },
+  {
+    id: "what-the-tea-house-teaches-about-hosting",
+    title: "What the Tea House Teaches About Hosting",
+    dek: "Silence as a form of attention — the opposite of hospitality as performance.",
+    category: "ritual",
+    date: "2026-08-14",
+    readTime: 6,
+    url: "#",
+    image: null
+  },
+  {
+    id: "naoshima-in-august",
+    title: "Naoshima in August: The Island That Asks Nothing of You",
+    dek: "No itinerary, no tourist logic — just Setouchi heat, Ando concrete, and the discipline of slowness.",
+    category: "culture",
+    date: "2026-06-01",
+    readTime: 9,
+    url: "naoshima-in-august-review.html",
+    image: null
+  },
+  {
+    id: "kado-japanese-summer-entrance",
+    title: "Kado: The Architecture of the Japanese Summer Entrance",
+    dek: "The genkan as philosophy — how a threshold defines everything that happens beyond it.",
+    category: "culture",
+    date: "2026-06-20",
+    readTime: 7,
+    url: "kado.html",
+    image: null
+  },
+  {
+    id: "on-choosing-fewer-better-things",
+    title: "On Choosing Fewer, Better Things",
+    dek: "A short reflection from the editors on why Nomadisch exists, and what \"intentional\" actually means when everything is for sale.",
+    category: "letter",
+    date: "2026-05-15",
+    readTime: 4,
+    url: "#",
+    image: null
+  }
+];
