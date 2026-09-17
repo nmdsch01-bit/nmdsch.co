@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Journal — NΦmadisch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Essays and reflections on Japandi living, wabi-sabi, hygge and the aesthetics of daily life.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,440;0,9..144,560;1,9..144,440&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/journal.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap top-inner">
+    <a class="wordmark" href="index.html">NΦMADISCH</a>
+    <ul class="navlinks">
+      <li><a href="index.html#articles">Reviews</a></li>
+      <li><a href="journal.html" class="active">Journal</a></li>
+      <li><a href="index.html#categories">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section class="section-intro">
+    <p class="kicker">Essays &amp; reflections</p>
+    <h1>The Journal</h1>
+    <p>Not a review. Not a guide. A place for the thinking behind the curation — on objects, ritual, and the quiet architecture of daily life.</p>
+  </section>
+
+  <!-- Category filter, built from the same data as the list below -->
+  <nav class="filters" id="filters" aria-label="Filter by topic">
+    <!-- injected by journal.js -->
+  </nav>
+
+  <!-- Compact, scalable entry list. New entries are added in js/journal-data.js
+       and appear here automatically — nothing in this file needs to change. -->
+  <section class="journal-list" id="journal-list" aria-live="polite">
+    <!-- injected by journal.js -->
+  </section>
+
+  <button class="load-more" id="load-more" type="button" hidden>Load more</button>
+
+  <div class="letter-strip">
+    <div>
+      <h4>The Nomadisch Letter</h4>
+      <p>Occasional. Considered. Never noise. One essay, one object, sent infrequently.</p>
+    </div>
+    <form class="letter-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email address" aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 NΦmadisch — Independent editorial</span>
+    <span>Curated Living &amp; Minimalism</span>
+  </div>
+</footer>
+
+<script src="js/journal-data.js"></script>
+<script src="js/journal.js"></script>
+</body>
+</html>
