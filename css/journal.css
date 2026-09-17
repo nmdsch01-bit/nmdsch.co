@@ -1,0 +1,228 @@
+/* ==========================================================
+   NΦMADISCH — Journal
+   Design tokens: keep these in sync with the rest of the site.
+   ========================================================== */
+
+:root {
+  --paper:        #EAE4D6;
+  --paper-raised: #F2EDE1;
+  --ink:          #23201C;
+  --ink-soft:     #6b655c;
+  --clay:         #9C5A3C;
+  --moss:         #6E7358;
+  --line:         #D3C9B2;
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:    'Public Sans', -apple-system, 'Segoe UI', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:        #1B1815;
+    --paper-raised: #221E1A;
+    --ink:          #ECE6D9;
+    --ink-soft:     #A79F90;
+    --clay:         #C67A54;
+    --moss:         #8B9271;
+    --line:         #37322B;
+  }
+}
+:root[data-theme="dark"] {
+  --paper:        #1B1815;
+  --paper-raised: #221E1A;
+  --ink:          #ECE6D9;
+  --ink-soft:     #A79F90;
+  --clay:         #C67A54;
+  --moss:         #8B9271;
+  --line:         #37322B;
+}
+
+/* Category accent colors — used only as a thin left-edge mark and
+   for the small kicker label, never as a filled badge. Add a line
+   here if you introduce a new category in journal-data.js. */
+:root {
+  --cat-wabi-sabi: var(--moss);
+  --cat-hygge:     var(--clay);
+  --cat-ritual:    #7A6B8C;
+  --cat-culture:   #4E7C8C;
+  --cat-letter:    var(--ink-soft);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+img, svg { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 40px);
+}
+
+/* ---------------- Nav ---------------- */
+nav.top { border-bottom: 1px solid var(--line); }
+.top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 560;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.navlinks { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.navlinks a { color: var(--ink-soft); text-decoration: none; font-size: 14px; letter-spacing: 0.02em; }
+.navlinks a.active { color: var(--ink); border-bottom: 1px solid var(--clay); padding-bottom: 3px; }
+.navlinks a:hover { color: var(--ink); }
+
+/* ---------------- Intro ---------------- */
+.section-intro { padding: 56px 0 28px; }
+.kicker { font-family: var(--font-body); font-size: 13px; color: var(--ink-soft); margin: 0 0 10px; }
+.section-intro h1 {
+  font-family: var(--font-display);
+  font-weight: 440;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.08;
+  margin: 0 0 16px;
+  max-width: 15ch;
+}
+.section-intro p { max-width: 52ch; color: var(--ink-soft); font-size: 16px; margin: 0; }
+
+/* ---------------- Filters ---------------- */
+.filters {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding: 8px 0 32px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+.filters button {
+  font-family: var(--font-body);
+  font-size: 14px;
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+}
+.filters button:hover { color: var(--ink); }
+.filters button.active { color: var(--ink); border-bottom-color: var(--clay); }
+
+/* ---------------- Entry list (compact, scalable) ---------------- */
+.journal-list { display: flex; flex-direction: column; }
+
+.entry-row {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 22px;
+  align-items: start;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+}
+.entry-row:first-child { padding-top: 4px; }
+
+.entry-thumb {
+  width: 104px;
+  height: 104px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--paper-raised);
+  border-left: 2px solid var(--cat-color, var(--clay));
+}
+.entry-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.entry-body .kicker { color: var(--cat-color, var(--clay)); margin-bottom: 6px; }
+.entry-row h3 {
+  font-family: var(--font-display);
+  font-weight: 440;
+  font-size: 21px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+.entry-row .dek {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.55;
+  margin: 0 0 10px;
+  max-width: 60ch;
+}
+.entry-meta {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.entry-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-soft); }
+
+.entry-row:hover h3 { color: var(--clay); }
+
+.load-more {
+  display: block;
+  margin: 36px auto 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  background: none;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  padding: 10px 22px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.load-more:hover { background: var(--ink); color: var(--paper); }
+
+.empty-state {
+  padding: 40px 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+/* ---------------- Newsletter ---------------- */
+.letter-strip {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  padding: 48px 0 72px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 24px;
+}
+.letter-strip h4 { font-family: var(--font-display); font-weight: 440; font-size: 22px; margin: 0 0 8px; }
+.letter-strip p { margin: 0; color: var(--ink-soft); font-size: 14px; }
+.letter-form { display: flex; border-bottom: 1px solid var(--ink); min-width: 300px; }
+.letter-form input { flex: 1; border: none; background: none; font-family: var(--font-body); font-size: 14px; color: var(--ink); padding: 8px 4px; outline: none; }
+.letter-form button { border: none; background: none; font-family: var(--font-body); font-size: 14px; color: var(--clay); cursor: pointer; padding: 8px 4px; }
+
+footer { border-top: 1px solid var(--line); padding: 26px 0; }
+footer .wrap { display: flex; justify-content: space-between; color: var(--ink-soft); font-size: 12.5px; flex-wrap: wrap; gap: 8px; }
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 620px) {
+  .entry-row { grid-template-columns: 72px 1fr; gap: 16px; padding: 20px 0; }
+  .entry-thumb { width: 72px; height: 72px; }
+  .entry-row h3 { font-size: 18px; }
+  .letter-strip { grid-template-columns: 1fr; }
+  .letter-form { min-width: 0; }
+}
