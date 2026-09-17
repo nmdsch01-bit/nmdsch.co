@@ -1,13 +1,13 @@
 /* ==========================================================
    NΦMADISCH — Journal renderer
    Reads journalEntries + CATEGORY_LABELS from journal-data.js
-   and builds the filter tabs + the entry list. You should not
+   and builds the filter pills + the card grid. You should not
    need to edit this file when adding new texts — edit
    journal-data.js instead.
    ========================================================== */
 
 (function () {
-  const PAGE_SIZE = 8;
+  const PAGE_SIZE = 9; // multiple of 3 so the grid stays even
 
   const listEl = document.getElementById("journal-list");
   const filtersEl = document.getElementById("filters");
@@ -59,40 +59,45 @@
     render();
   }
 
-  function entryRow(entry) {
+  function entryCard(entry) {
     const a = document.createElement("a");
-    a.className = "entry-row";
+    a.className = "entry-card";
     a.href = entry.url || "#";
-    a.style.setProperty("--cat-color", categoryColorVar(entry.category));
 
     const thumb = document.createElement("div");
     thumb.className = "entry-thumb";
-    thumb.style.borderLeftColor = categoryColorVar(entry.category);
     if (entry.image) {
       const img = document.createElement("img");
       img.src = entry.image;
       img.alt = "";
       img.loading = "lazy";
       thumb.appendChild(img);
-    } else {
-      thumb.style.background = "var(--paper-raised)";
     }
+    // If no image is set yet, the thumb stays an empty --paper-raised block.
 
-    const body = document.createElement("div");
-    body.className = "entry-body";
-    body.innerHTML = `
-      <p class="kicker" style="color:${categoryColorVar(entry.category)}">${CATEGORY_LABELS[entry.category] || entry.category}</p>
-      <h3>${entry.title}</h3>
-      <p class="dek">${entry.dek}</p>
-      <div class="entry-meta">
-        <span>${formatDate(entry.date)}</span>
-        <span class="dot"></span>
-        <span>${entry.readTime} min read</span>
-      </div>
+    const tags = document.createElement("div");
+    tags.className = "entry-tags";
+    tags.innerHTML = `
+      <span class="cat" style="--cat-color:${categoryColorVar(entry.category)}">${CATEGORY_LABELS[entry.category] || entry.category}</span>
+      <span class="type">${entry.readTime} min</span>
     `;
 
+    const h3 = document.createElement("h3");
+    h3.textContent = entry.title;
+
+    const dek = document.createElement("p");
+    dek.className = "dek";
+    dek.textContent = entry.dek;
+
+    const meta = document.createElement("p");
+    meta.className = "entry-meta";
+    meta.textContent = formatDate(entry.date);
+
     a.appendChild(thumb);
-    a.appendChild(body);
+    a.appendChild(tags);
+    a.appendChild(h3);
+    a.appendChild(dek);
+    a.appendChild(meta);
     return a;
   }
 
@@ -113,7 +118,7 @@
     }
 
     filtered.slice(0, visibleCount).forEach((entry) => {
-      listEl.appendChild(entryRow(entry));
+      listEl.appendChild(entryCard(entry));
     });
 
     loadMoreBtn.hidden = filtered.length <= visibleCount;
