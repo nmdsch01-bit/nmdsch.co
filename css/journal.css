@@ -7,9 +7,9 @@
 
 :root {
   --paper:        #F6F5F2;   /* fundo editorial quente */
-  --paper-raised: #ECE5D2;  /* placeholder thumb / raised surface */
+  --paper-raised: #ECEAE4;  /* placeholder thumb / raised surface */
   --ink:          #0F0F0E;
-  --ink-soft:     #857a68;
+  --ink-soft:     #5E5E59;
   --clay:         #B5652E;
   --moss:         #6E7358;
   --line:         #D7D5CE;
