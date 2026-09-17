@@ -6,29 +6,29 @@
    ========================================================== */
 
 :root {
-  --paper:        #F5F1E6;  /* sand background */
+  --paper:        #F6F5F2;   /* fundo editorial quente */
   --paper-raised: #ECE5D2;  /* placeholder thumb / raised surface */
-  --ink:          #1F1B17;
+  --ink:          #0F0F0E;
   --ink-soft:     #857a68;
   --clay:         #B5652E;
   --moss:         #6E7358;
-  --line:         #DED5BE;
+  --line:         #D7D5CE;
 
-  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-body:    'Public Sans', -apple-system, 'Segoe UI', sans-serif;
+  --font-display:  'Cormorant Garamond', Georgia, serif;
+  --font-body:     'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Dark mode — manual toggle only (see js/theme.js), a cool blue-slate
    in the spirit of note.com's dark theme. Not tied to the visitor's
    system setting, and not shown unless they click the toggle. */
 :root[data-theme="dark"] {
-  --paper:        #12151C;
+  --paper:        #49759c;
   --paper-raised: #1B212C;
   --ink:          #E7E9EE;
   --ink-soft:     #9AA0AC;
   --clay:         #D98A5E;
   --moss:         #93A17C;
-  --line:         #262C39;
+  --line:         #D7D5CE;
 }
 
 /* Category accent colors — used only as a thin underline under the
