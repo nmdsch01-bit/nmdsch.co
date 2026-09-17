@@ -31,9 +31,9 @@
   --line:         #D7D5CE;
 }
 
-/* Category accent colors — used only as a thin underline under the
-   category label, never as a filled badge. Add a line here if you
-   introduce a new category in journal-data.js. */
+/* Cores de destaque da categoria — usadas apenas como um sublinhado fino sob o 
+rótulo de categoria, nunca como um emblema preenchido. Adicione uma linha aqui se você 
+introduzir uma nova categoria em journal-data.js. */
 :root {
   --cat-wabi-sabi: var(--moss);
   --cat-hygge:     var(--clay);
