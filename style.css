@@ -1751,5 +1751,13 @@ p {
   }
 
 }
+
+/* Centraliza banners de afiliado em qualquer parte do site */
+.affiliate-banner-wrap {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--space-16);
+}
+
 ```
 
