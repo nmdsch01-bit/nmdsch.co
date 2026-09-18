@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
+
 <meta charset="UTF-8">
 <title>Journal — NΦmadisch</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Essays and reflections on Japandi living, wabi-sabi, hygge and the aesthetics of daily life.">
 
- <!-- Fontes — Carregadas via Google Fonts
-    Cormorant Garamond: display editorial elegante
-    DM Sans: corpo de texto limpo e moderno -->
+<!-- Fontes — mesmas do resto do site
+     Cormorant Garamond: display editorial elegante
+     DM Sans: corpo de texto limpo e moderno -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
 
- <!-- CSS Principal > css/journal.css -->
-<link rel="stylesheet" href="journal.css/">
+<!-- CSS do site inteiro (cabeçalho, rodapé, tudo que é igual às outras páginas) -->
+<link rel="stylesheet" href="style.css" />
+
+<!-- CSS só da página Journal (grid de cards, filtros, etc.) — carrega DEPOIS do style.css -->
+<link rel="stylesheet" href="css/journal.css" />
+
 <script src="js/theme.js"></script>
 
-<!-- Favicon simples inline SVG — substitua por um arquivo .ico se desejar -->
+<!-- Favicon — mesmo padrão do resto do site -->
 <link rel="icon" type="image/png" href="image/favicon.png" />
-  
+
 </head>
-  
+
 <body>
   <!-- ============================================================
-    HEADER / NAVEGAÇÃO
-    Barra superior fixa com logo, menu e busca
+    HEADER / NAVEGAÇÃO — igual ao index.html / about.html
   ============================================================ -->
 <header class="site-header" role="banner" id="site-header">
 <div class="header-inner container">
@@ -44,27 +47,25 @@
 <span class="logo-sub">est. 2026</span>
 </a>
 </div>
-    
+
    <!-- Navegação principal -->
-<nav class="site-nav" role="navigation" 
-        aria-label="Primary navigation" id="site-nav">
+<nav class="site-nav" role="navigation" aria-label="Primary navigation" id="site-nav">
 <ul class="nav-list">
-          <li><a href="#featured" class="nav-link"> </a></li>
-          <li><a href="#categories" class="nav-link">Categories</a></li>
-          <li><a href="#articles" class="nav-link">Reviews</a></li>
-          <li><a href="journal.html" class="nav-link">Journal</a></li>
+          <li><a href="index.html#categories" class="nav-link">Categories</a></li>
+          <li><a href="index.html#articles" class="nav-link">Reviews</a></li>
+          <li><a href="journal.html" class="nav-link nav-link--active">Journal</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
 </ul>
 </nav>
 
-      <!-- Ações do header: busca + idioma -->
- <div class="header-actions">
-<button class="search-trigger" aria-label="Open search" id="search-trigger">
-
-      <!-- Botão Dark Mode -->
+      <!-- Ações do header: busca + idioma + tema -->
+<div class="header-actions">
+<button class="search-trigger" aria-label="Open search" id="search-trigger">🔍</button>
 <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾ Dark</button>
-  </div>
-</nav>
+</div>
+
+</div>
+</header>
 
 <main class="wrap">
 
