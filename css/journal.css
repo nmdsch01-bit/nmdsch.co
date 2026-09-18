@@ -6,34 +6,34 @@
    ========================================================== */
 
 :root {
-  --paper:        #F6F5F2;   /* fundo editorial quente */
-  --paper-raised: #ECEAE4;  /* placeholder thumb / raised surface */
-  --ink:          #0F0F0E;
-  --ink-soft:     #5E5E59;
+  --paper:        #F3F1EB;  /* neutral sand — matches nomadisch.co, less yellow */
+  --paper-raised: #E8E5DC;
+  --ink:          #201D19;
+  --ink-soft:     #837E76;
   --clay:         #B5652E;
   --moss:         #6E7358;
-  --line:         #D7D5CE;
+  --line:         #E1DDD3;
 
-  --font-display:  'Cormorant Garamond', Georgia, serif;
-  --font-body:     'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body:    'DM Sans', -apple-system, 'Segoe UI', sans-serif;
 }
 
 /* Dark mode — manual toggle only (see js/theme.js), a cool blue-slate
    in the spirit of note.com's dark theme. Not tied to the visitor's
    system setting, and not shown unless they click the toggle. */
 :root[data-theme="dark"] {
-  --paper:        #49759c;
+  --paper:        #12151C;
   --paper-raised: #1B212C;
   --ink:          #E7E9EE;
   --ink-soft:     #9AA0AC;
   --clay:         #D98A5E;
   --moss:         #93A17C;
-  --line:         #D7D5CE;
+  --line:         #262C39;
 }
 
-/* Cores de destaque da categoria — usadas apenas como um sublinhado fino sob o 
-rótulo de categoria, nunca como um emblema preenchido. Adicione uma linha aqui se você 
-introduzir uma nova categoria em journal-data.js. */
+/* Category accent colors — used only as a thin underline under the
+   category label, never as a filled badge. Add a line here if you
+   introduce a new category in journal-data.js. */
 :root {
   --cat-wabi-sabi: var(--moss);
   --cat-hygge:     var(--clay);
@@ -105,7 +105,7 @@ nav.top { border-bottom: 1px solid var(--line); }
 .kicker { font-family: var(--font-body); font-size: 13px; color: var(--ink-soft); margin: 0 0 10px; }
 .section-intro h1 {
   font-family: var(--font-display);
-  font-weight: 440;
+  font-weight: 500;
   font-size: clamp(32px, 5vw, 48px);
   line-height: 1.08;
   margin: 0 0 16px;
@@ -173,7 +173,7 @@ nav.top { border-bottom: 1px solid var(--line); }
 
 .entry-card h3 {
   font-family: var(--font-display);
-  font-weight: 440;
+  font-weight: 500;
   font-size: 22px;
   line-height: 1.28;
   margin: 0 0 10px;
@@ -214,7 +214,7 @@ nav.top { border-bottom: 1px solid var(--line); }
   align-items: end;
   gap: 24px;
 }
-.letter-strip h4 { font-family: var(--font-display); font-weight: 440; font-size: 22px; margin: 0 0 8px; }
+.letter-strip h4 { font-family: var(--font-display); font-weight: 500; font-size: 22px; margin: 0 0 8px; }
 .letter-strip p { margin: 0; color: var(--ink-soft); font-size: 14px; }
 .letter-form { display: flex; border-bottom: 1px solid var(--ink); min-width: 300px; }
 .letter-form input { flex: 1; border: none; background: none; font-family: var(--font-body); font-size: 14px; color: var(--ink); padding: 8px 4px; outline: none; }
