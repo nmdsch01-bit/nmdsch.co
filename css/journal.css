@@ -1,46 +1,10 @@
 /* ==========================================================
    NΦMADISCH — Journal
-   Design tokens: keep these in sync with the rest of the site.
-   Fixed light "sand" palette — intentionally no dark-mode swap,
-   to match the rest of nomadisch.co.
+   Tokens live in tokens.css so this file and essay.css share
+   the exact same colors and fonts.
    ========================================================== */
 
-:root {
-  --paper:        #F3F1EB;  /* neutral sand — matches nomadisch.co, less yellow */
-  --paper-raised: #E8E5DC;
-  --ink:          #201D19;
-  --ink-soft:     #837E76;
-  --clay:         #B5652E;
-  --moss:         #6E7358;
-  --line:         #E1DDD3;
-
-  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-body:    'DM Sans', -apple-system, 'Segoe UI', sans-serif;
-}
-
-/* Dark mode — manual toggle only (see js/theme.js), a cool blue-slate
-   in the spirit of note.com's dark theme. Not tied to the visitor's
-   system setting, and not shown unless they click the toggle. */
-:root[data-theme="dark"] {
-  --paper:        #12151C;
-  --paper-raised: #1B212C;
-  --ink:          #E7E9EE;
-  --ink-soft:     #9AA0AC;
-  --clay:         #D98A5E;
-  --moss:         #93A17C;
-  --line:         #262C39;
-}
-
-/* Category accent colors — used only as a thin underline under the
-   category label, never as a filled badge. Add a line here if you
-   introduce a new category in journal-data.js. */
-:root {
-  --cat-wabi-sabi: var(--moss);
-  --cat-hygge:     var(--clay);
-  --cat-ritual:    #7A6B8C;
-  --cat-culture:   #4E7C8C;
-  --cat-letter:    var(--ink-soft);
-}
+@import url("tokens.css");
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
