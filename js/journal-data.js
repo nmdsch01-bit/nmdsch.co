@@ -41,7 +41,7 @@ const journalEntries = [
     category: "wabi-sabi",
     date: "2026-09-10",
     readTime: 7,
-    url: "#",
+    url: "art-of-nothing-on-the-table.html",
     image: null
   },
   {
