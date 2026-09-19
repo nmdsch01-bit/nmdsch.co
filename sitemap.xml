@@ -6,8 +6,6 @@
   </url>
 </urlset>
 
-
-
  <!-- Página de ABOUT US -->
   <url>
     <loc>https://www.nomadisch.co/about.html</loc>
@@ -65,6 +63,41 @@
  <!-- Posts 07 COSRX -->
 <url>
     <loc>https://nomadisch.co/cosrx-snail-mucin-review.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+
+ <!-- Posts 08 AKARI -->
+<url>
+    <loc>https://www.nomadisch.co/akari-lamp.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+
+<!-- Posts 09 COFFE TABLE -->
+<url>
+    <loc>https://www.nomadisch.co/coffee-table.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+
+<!-- Posts 10 ALAYRA -->
+<url>
+    <loc>https://www.nomadisch.co/alayra-mountain-wall-art.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+
+<!-- Posts 10 BENSON -->
+<url>
+    <loc>https://www.nomadisch.co/benson-christmas-tree.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+
+<!-- Posts 11 PERGOLA -->
+<url>
+    <loc>https://www.nomadisch.co/pergola-4-pro-review.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
