@@ -1787,5 +1787,50 @@ p {
 }
 
 
+/* === COMPARISON TABLE — tabela comparativa dentro de posts ==== */
+.comparison-table-wrap {
+  max-width: 100%;
+  margin: var(--space-10) 0;
+  overflow-x: auto;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+}
+
+.comparison-table thead tr {
+  border-bottom: 2px solid var(--color-ink);
+}
+
+.comparison-table th {
+  padding: var(--space-4);
+  font-weight: 600;
+  color: var(--color-ink);
+  text-align: left;
+}
+
+.comparison-table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: var(--color-ink-muted);
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background-color: var(--color-surface);
+}
+
+
+
 ```
 
